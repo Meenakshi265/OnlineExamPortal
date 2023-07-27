@@ -1,0 +1,15 @@
+.myQuiz{
+    float:left; 
+    border: 
+    2px solid rgb(218, 227, 234);
+     margin:30px;
+     border-radius: 25px;
+     box-shadow: 5px 10px #888888;
+
+}
+
+.example-headed-image{
+    background-image: url(../../../../assets/img/exam.png);
+    background-size: cover;
+
+}

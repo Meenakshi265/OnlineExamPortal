@@ -1,0 +1,21 @@
+.profile{
+     width: 200px;
+     height: 180px;
+     border: 2px solid rgb(61, 157, 174);
+     border-radius: 50%;
+}
+.table{
+    width: 70%;
+   text-align: center;
+   margin-left: 170px;
+   
+  
+}
+.table-data{
+    padding: 15px 20px;
+    border: 1px solid rgb(116, 118, 118) ;
+    font-size: 20px;
+}
+.mat-action{
+    width: 200px;
+}

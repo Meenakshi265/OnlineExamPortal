@@ -1,0 +1,70 @@
+<p>
+    <mat-toolbar class="nav-color">
+      <a 
+       [routerLink]="'/'"
+      mat-icon-button class="example-icon" 
+      aria-label="Example icon-button with menu icon">
+        <mat-icon class="ml-20">menu_book</mat-icon>
+        <span  class="ml-20">ONLINE EXAMPORTAL</span>
+      </a>
+      
+      <span class="example-spacer"></span>
+ 
+      <a
+      *ngIf="!isLoggedIn"
+      [routerLink]="'/loginuser'"
+       mat-icon-button class="example-icon"  
+       style="margin-right:50px;" 
+       aria-label="Example icon-button with menu icon">
+        Login
+      </a>
+
+
+      
+      <a 
+      *ngIf="!isLoggedIn"
+      [routerLink]="'/signup'"
+      mat-icon-button 
+      class="example-icon" 
+      style="margin-right:60px;"  
+      aria-label="Example icon-button with menu icon">
+      Register
+       
+      </a>
+
+
+
+      <button
+      *ngIf="isLoggedIn"
+    
+      mat-icon-button 
+      class="example-icon" 
+      style="margin-right:60px;"  
+      aria-label="Example icon-button with menu icon">
+
+
+      
+
+      <div class="dropdown">
+        <div class="dropbtn bottom-border">{{login.getUser().userName}}</div>
+        
+        <div class="dropdown-content">
+        
+          <a href="/admin">Dashbord</a>
+          <a href="#">Home</a>
+        </div>
+      </div>
+      </button>
+      <a 
+      *ngIf="isLoggedIn"
+      (click)="logout2()"
+      mat-icon-button 
+      class="example-icon" 
+      style="margin-right:60px;"  
+      aria-label="Example icon-button with menu icon">
+     Logout  
+      </a>
+     
+    </mat-toolbar>
+  </p>
+  

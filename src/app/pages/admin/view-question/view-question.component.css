@@ -1,0 +1,16 @@
+.btn-add{
+     border-radius: 100%;
+     
+}
+.question{
+     border:5px snow;
+}
+.mycard{
+     box-shadow:10px rgb(159, 156, 155);
+   
+}
+.myquestion{
+     background-color: rgb(238, 241, 241);
+     padding: 10px;
+     border-radius: 10px;
+}

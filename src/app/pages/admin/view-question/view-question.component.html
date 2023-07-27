@@ -1,0 +1,65 @@
+<mat-card>
+   <div mat-subheader>
+    <h1 class="ml-20">Question of {{qTitle}}</h1>
+   </div>
+   <div class="container text-center mt-10 mb-10" color="primary">
+        
+ 
+    <button mat-fab color="primary" aria-label="Example icon button with a add icon"  [routerLink]="'/admin/add-question/'+qId+'/'+qTitle" >
+        <mat-icon>add</mat-icon>
+      </button>
+     
+  </div>
+
+<div class="bootstrap-wrapper question">
+
+    <div class="row">
+        <div class="col-md-12">
+         <mat-card  class="mycard" *ngFor="let c of questionData; let i=index;" >
+            <mat-card-content>
+                <p class="myquestion">
+                    <b>{{i+1}}.</b>
+                    <span   class="ml-10"  [innerHTML]="c.content">
+                        <pre>
+                            {{c.content}}
+                        </pre>
+                    </span>
+                </p>
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <p ><b>1)</b><span  class="ml-10"  [innerHTML]="c.option1">{{c.option1}}</span></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p ><b>2)</b><span  class="ml-10"  [innerHTML]="c.option2">{{c.option2}}</span></p>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <p class="ml-20"><b>4)</b><span  class="ml-10"  [innerHTML]="c.option3">{{c.option3}}</span></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p ><b>4)</b><span  class="ml-10"  [innerHTML]="c.option4">{{c.option4}}</span></p>
+                        </div>
+                        
+                    </div>
+
+                    <p>
+                        <b>Correct Answer:</b> {{c.answer}}
+                       
+                        <button mat-button  (click)="deleteQuestion(c.quesId)" color="primary" class="ml-20 flot-right"><mat-icon>delete</mat-icon></button>
+                        <button mat-button  [routerLink]="'/admin/update-question/'+c.quesId"  color="primary" class="ml-20 flot-right"><mat-icon>edit</mat-icon></button>
+                    </p>
+                </div>
+         
+            </mat-card-content>
+
+         </mat-card>
+         <mat-divider></mat-divider>
+        </div>
+    </div>
+</div>
+
+</mat-card>
